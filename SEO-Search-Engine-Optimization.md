@@ -53,5 +53,30 @@
   <span>我的课程</span>
 </ul>
 ```
+### 其他注意的优化
+* 重要的HTML代码放最前面，用float样式改变布局； 因为小蜘蛛是从上往下爬的
+* 重要内容不要js输出，因为小蜘蛛不认识js
+* 尽量少用iframe框架，因为小蜘蛛也对iframe比较难处理
+* 谨慎使用display: none，因为对于这种属性的， 小蜘蛛直接忽略；可以设置样式让不可见的元素超出可视范围
+* 不断精简代码
+* <a>需要加title说明，对于外部链接，加rel="nofollow"告诉小蜘蛛不要去爬了
+* <p> xxx <br> xxx <br> </p> - p 和 br 同用， br 不用在其他换行
+* <img>标签应使用alt说明，即使图片访问不了， 也能知道图片是什么内容
+* <strong>，<em>加粗或者斜体需要让小蜘蛛识别的关键字； <b>,<i>加粗或者斜体其他不需要小蜘蛛知道的关键字，仅仅需要效果而已
+* 用<caption>来定义表格的标题
+```
+<table>
+  <caption> title </caption>
+  <tr>
+    <th> Month </th>
+    <th> Savings </th>
+  </tr>
+  <tr>
+    <td> January </td>
+    <td> $ 100 </td>
+  </tr>
+  </table>
+```
+
 
 
